@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Country Details</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" />
+</head>
+<body>
+  <header>
+    <div class="header1">
+      <h2 class="title">Where in the World?</h2>
+      <p class="theme-changer"><i class="fa-regular fa-moon"></i> Dark Mode</p>
+    </div>
+  </header>
+
+  <div class="header2">
+    <button class="back-button" onclick="history.back()">
+      <i class="fa-solid fa-arrow-left"></i> Back
+    </button>
+
+    <div class="country-details">
+      <img src="" alt="Country flag" />
+      <div class="country-text">
+        <h1></h1>
+        <div class="details-text">
+          <p class="nativename"></p>
+          <p class="population"></p>
+          <p class="region"></p>
+          <p class="subregion"></p>
+          <p class="capital"></p>
+          <p class="Domain"></p>
+          <p class="currencies"></p>
+          <p class="language"></p>
+        </div>
+
+        <div class="border-countries">
+          <p><b>Border Countries:</b></p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="country.js"></script>
+</body>
+</html>

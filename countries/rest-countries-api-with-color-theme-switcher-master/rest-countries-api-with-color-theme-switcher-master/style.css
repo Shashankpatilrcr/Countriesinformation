@@ -1,0 +1,186 @@
+* {
+  box-sizing: border-box;
+  font-family: 'Nunito', sans-serif;
+}
+
+body {
+  margin: 0;
+  background-color: hsl(0, 0%, 98%);
+  color: hsl(200, 15%, 8%);
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.dark {
+  background-color: hsl(207, 26%, 17%);
+  color: white;
+}
+
+header {
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  background: white;
+  padding: 20px;
+}
+
+.dark header {
+  background-color: hsl(209, 23%, 22%);
+}
+
+.header1 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.controls {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.search-container input {
+  padding: 10px;
+  width: 250px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+.filter-region {
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+.countries-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 20px;
+  padding: 20px;
+}
+
+.country {
+  background: white;
+  text-decoration: none;
+  color: inherit;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.country img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+}
+
+.country .card-content {
+  padding: 15px;
+}
+
+.dark .country {
+  background-color: hsl(209, 23%, 22%);
+}
+
+.country-details {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  padding: 40px;
+  align-items: center;
+}
+
+.country-details img {
+  width: 300px;
+  border-radius: 10px;
+}
+
+.details-text {
+  display: flex;
+  flex-direction: column;
+  row-gap: 12px;
+  column-gap: 64px;
+  max-height: 180px;
+  flex-wrap: wrap;
+}
+
+.details-text p {
+  margin: 6px 0;
+}
+
+.border-countries {
+  margin-top: 30px;
+}
+
+.border-countries a {
+  margin-right: 8px;
+  padding: 5px 10px;
+  background: white;
+  border-radius: 5px;
+  text-decoration: none;
+  color: inherit;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.2);
+}
+
+.dark .border-countries a {
+  background: hsl(209, 23%, 22%);
+}
+
+.back-button {
+  margin: 20px;
+  padding: 10px 20px;
+  background: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  box-shadow: 0 1px 5px rgba(0,0,0,0.2);
+}
+
+.dark .back-button {
+  background: hsl(209, 23%, 22%);
+  color: white;
+}
+
+/* 🌐 Responsive design for mobile */
+@media (max-width: 768px) {
+  .header1 {
+    /* flex-direction: column;
+    align-items: flex-start;
+    gap: 10px; */
+    font-size: 12px;
+  }
+
+  .controls {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .search-container input {
+    width: 100%;
+  }
+
+  .filter-region {
+    width: 50%;
+    /* font-size: 20px; */
+  }
+
+  .country-details {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 20px;
+  }
+
+  .country-details img {
+    width: 100%;
+    max-width: 350px;
+  }
+
+  .details-text {
+    max-height: none;
+    flex-wrap: nowrap;
+  }
+
+  .countries-container {
+    grid-template-columns: 1fr;
+  }
+}
